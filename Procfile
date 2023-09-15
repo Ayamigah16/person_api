@@ -1,0 +1,1 @@
+web: gunicorn person_api.wsgi –log-file -
