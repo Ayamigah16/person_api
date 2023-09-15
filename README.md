@@ -57,3 +57,14 @@ http
 GET /api/persons/Alice/
 ```
 
+### Sample Response
+```
+    "id": 1,
+    "name": "Alice",
+    "dob": "1990-01-15",
+    "email": "alice@example.com",
+    "phone_number": "+1234567890",
+```
+
+### Contributing
+Contributions are warmly welcomed. You can ***fork*** the repo and add some features, as well as report bugs.

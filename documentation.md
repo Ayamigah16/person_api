@@ -1,3 +1,84 @@
-### Database Model
+#  Personify API
+A simple REST API capable of CRUD operations on a "person" resource
+ 
 
-!["ER-diagram]("https://github.com/Ayamigah16/hngx-person-api/blob/main/er_diagram.png")
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [API Endpoints](#api-endpoints)
+- [Database](#database)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Built With](#built-with)
+
+## Getting Started
+
+### Prerequisites
+All dependencies are in the [requirements.txt]("https://github.com/Ayamigah16/hngx-person-api/blob/main/person_api/requirements.txt") file
+
+
+### Installation
+Use the steps below to run the personif-api locally
+* Clone the repository
+    git clone [hngx-person-api]("https://github.com/Ayamigah16/hngx-person-api/tree/main")
+* Navigate to the Project Directory
+    cd **person_api"
+* Activate the virtualenv
+    venv\Scripts\activate
+* Install Dependencies
+    pip install -r requirements.txt
+* Apply Database Migration
+    python manage.py migrate
+* Create a Superuser (optional)
+    python manage.py createsuperuser
+* Run the Development Server:
+    python manage.py runserver
+
+
+
+## API Endpoints
+These are the list of the endpoints
+
+- `GET /api/`: List all persons.
+- `POST /api/`: Create a new person.
+- `GET /api/user_id/`: Retrieve details of a person by name.
+- `PUT /api/user_id/`: Update details of a person by name.
+- `DELETE /api/user_id/`: Delete a person by name.
+
+### Sample Request
+
+```
+http
+GET /api/persons/Alice/
+```
+
+### Sample Response
+```
+    "id": 1,
+    "name": "Alice",
+    "dob": "1990-01-15",
+    "email": "alice@example.com",
+    "phone_number": "+1234567890",
+```
+
+### Database Schema
+
+
+!["ER-diagram][def]
+
+[def]: "./er_diagram.png"
+
+### Testing
+Describe how to run tests for your project and provide sample test cases if available.
+
+### Deployment
+This api is deployed on heroku server. Access it by clicking on ["person_api]("https://personify-api-89ac99fbe068.herokuapp.com/api/")
+
+### Built With
+Below are the technologies and libraries used in your project.
+
+* Django - The web framework used
+* Django REST framework - Toolkit for building Web APIs
+* Django Phonenumber Field - For phone number field
