@@ -15,6 +15,4 @@ class Person(models.Model):
         person_address (OneToOneField): A one-to-one relationship with the Address model for the person's address (nullable and optional).
     """
     name = models.CharField(max_length=100)
-    dob = models.DateField(null=True, blank=True)
-    email = models.EmailField(max_length=255, null=True, blank=True)
-    phone_number = PhoneNumberField()
+
